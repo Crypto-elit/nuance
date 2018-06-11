@@ -1,3 +1,3 @@
-#Bitcoin
+# Bitcoin
 
 Library: bitcore-lib.js
