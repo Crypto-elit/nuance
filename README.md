@@ -3,23 +3,21 @@ In this repository, you will learn how to add support for your application or we
 
 ## Features: 
 - without water (decentrialized, secure and other stuff)
-- official resources (website, community, docs)
 - short description
-- worked links tot explorers (for mainnet (livenet), testnet)
+- official resources (website, community, docs)
+- worked links to explorers (for mainnet (livenet), testnet)
 - worked links to faucet (for mainnet (livenet), testnet)
 - availability, comprehension,relevance rang systems
 - worked examples
 
 ## Types of examples
 All presented examples will perform 4 functions:
-1) Creating a wallet
-2) Getting Balance
-2) Getting the transaction history
-3) Sending a transaction
+- Creating a wallet
+- Getting Balance
+- Getting the transaction history
+- Sending a transaction
 
 ## Table of Contents
 - [Bitcoin](/bitcoin.md)
 - [Ethereum](/ethereum.md)
 - [Ripple](/ripple.md)
-
-
