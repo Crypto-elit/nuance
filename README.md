@@ -3,12 +3,12 @@ In this repository, you will learn how to add support for your application or we
 
 ## Features: 
 - without water (decentrialized, secure and other stuff)
-- short description
 - official resources (website, community, docs)
-- worked examples
+- short description
+- worked links tot explorers (for mainnet (livenet), testnet)
 - worked links to faucet (for mainnet (livenet), testnet)
 - availability, comprehension,relevance rang systems
-- worked links tot explorers (for mainnet (livenet), testnet)
+- worked examples
 
 ## Types of examples
 All presented examples will perform 4 functions:
