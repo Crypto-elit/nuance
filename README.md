@@ -6,7 +6,7 @@ In this repository, you will learn how to add support for your application or we
 - short description
 - official resources (website, community, docs)
 - worked links to explorers (for mainnet (livenet), testnet)
-- worked links to faucet (for mainnet (livenet), testnet)
+- worked links to faucet (testnet)
 - availability, comprehension,relevance rang systems
 - worked examples
 
