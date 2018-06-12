@@ -73,19 +73,22 @@ async fetchFee() => {
 
 ### Send transaction
 ```
-async sendTransaction(address, privateKey, fee, destination, amountSat) => {
+async sendTransaction(address, privateKey, fee, recipient, amountSat) => {
+  // Fetch utxos
   insight.getUtxos(address, (error, utxos) => {
     if (error) {
       console.error( error);
     } else {
-      const transaction = new bitcore.Transaction()
+      // Create transaction and sign it
+      const transaction = new bitcore.Transaction() 
         .from(utxos)
-        .to(destination, amountSat)
+        .to(recipient, amountSat) // Amount in satoshi
         .change(address)
         .fee(fee)
         .sign(privateKey);
 
       if (!transaction.getSerializationError()) {
+        // Broadcast to network
         insight.broadcast(transaction, (err, data) => {
           if (err) {
             console.error('err', err);
