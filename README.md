@@ -22,3 +22,8 @@ All presented examples will perform 5 functions:
 - [Bitcoin](/bitcoin.md)
 - [Ethereum](/ethereum.md)
 - [Ripple](/ripple.md)
+
+
+## You can help to project
+bitcoin - 1Xr2Lu1rB5Likuov5M87XiDDR4JL17PNz
+ethereum - 0x335D6DCcaF627D95dCd23c5a5D3Bc40F5d884052
