@@ -15,6 +15,7 @@ All presented examples will perform 4 functions:
 - Creating a wallet
 - Getting Balance
 - Getting the transaction history
+- Getting transaction fee
 - Sending a transaction
 
 ## Table of Contents
