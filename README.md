@@ -1,4 +1,4 @@
-# Crypto-currency nuance for frontendrs
+# Crypto-currency nuance for frontenders
 In this repository, you will learn how to add support for your application or website to crypto-currency transactions with one of many currencies.
 
 ## Features: 
