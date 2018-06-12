@@ -9,7 +9,92 @@ Library: [bitcore-lib](https://github.com/bitpay/bitcore-lib), [bitcore-explorer
 
 Docs: [bitcore-lib](https://bitcore.io/api/lib), [bitcore-explorers](https://github.com/bitpay/bitcore-explorers/blob/master/docs/index.md).
 
-Explorers: 
-  [livenet](https://insight.bitpay.com/api), [testet](https://test-insight.bitpay.com/api)
+Explorers:
+  [livenet](https://insight.bitpay.com), [testet](https://test-insight.bitpay.com)
 
 Faucets: [faucet-1](https://testnet.manu.backend.hamburg/bitcoin-cash-faucet), [faucet-2](https://testnet.manu.backend.hamburg/faucet)
+
+## Examples
+### Common
+```
+import explorers from 'bitcore-explorers';
+import axios from 'axios';
+
+const bitcore = explorers.bitcore;
+bitcore.Networks.defaultNetwork = bitcore.Networks['testnet']; // 'livenet' by default
+
+const insight = new explorers.Insight();
+```
+
+### Create wallet
+```
+const privateKey = new bitcore.PrivateKey(); // Generate random private key
+const address = privateKey.toAddress().toString(); // Get address from private key 
+const publicKey = privateKey.toPublicKey().toString(); // Get public key from private key 
+```
+
+### Get balance
+```
+async fetchBalance(address) => {
+  try {
+    const explorer = 'your exlorer url || use above explorer';
+    const { data } = await axios.get(`${explorer}/api/addr/${address}`); 
+    cosnt balanceBtc = data.balance; // Get balance in btc
+    cosnt balanceSat = data.balanceSat; // Get balance in satoshi
+  } catch (e) {
+    console.error(e);
+  }
+}
+```
+
+### Get transactions list
+```
+async fetchTransactions(address) => {
+  try {
+    const { data } = await axios.get(`${explorer}/api/txs/?address=${address}`);
+    cosnt transactions = data; // Transactions list
+  } catch (e) {
+    console.error(e);
+  }
+}
+```
+
+### Get fee
+```
+async fetchFee() => {
+  try {
+    const feeObj = await axios.get(`${config.url}/utils/estimatefee`);
+    const fee = feeObj.data[2]; // in btc
+  } catch (e) {
+    console.error(e);
+  }
+}
+```
+
+### Send transaction
+```
+async sendTransaction(address, privateKey, fee, destination, amountSat) => {
+  insight.getUtxos(address, (error, utxos) => {
+    if (error) {
+      console.error( error);
+    } else {
+      const transaction = new bitcore.Transaction()
+        .from(utxos)
+        .to(destination, amountSat)
+        .change(address)
+        .fee(fee)
+        .sign(privateKey);
+
+      if (!transaction.getSerializationError()) {
+        insight.broadcast(transaction, (err, data) => {
+          if (err) {
+            console.error('err', err);
+          } else {
+            console.log(data);
+          }
+        });
+      }
+    }
+  });
+}
+```
