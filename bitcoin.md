@@ -106,4 +106,4 @@ async sendTransaction(address, privateKey, fee, recipient, amountSat) => {
 The first full-fledged cryptovalual, but due to the lack of a single center there is no complete documentation. There are no such primitive methods as getting a balance or transactions, let alone sending transactions.
 There is no way to specify a custom node.
 No help from the community.
-Collect all the examples was quite difficult, and even consider that this is one of the popular crypto currency is not recommended to integrate into your application or web site
+Collect all the examples was quite difficult, and even consider that this is one of the popular crypto currency is not recommended to integrate into your application or web site.
