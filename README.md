@@ -11,7 +11,7 @@ In this repository, you will learn how to add support for your application or we
 - worked examples
 
 ## Types of examples
-All presented examples will perform 4 functions:
+All presented examples will perform 5 functions:
 - Creating a wallet
 - Getting Balance
 - Getting the transaction history
