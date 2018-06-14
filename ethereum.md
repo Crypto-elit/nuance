@@ -50,6 +50,16 @@ async createWallet() => {
     // Create with username and password
     const wallet = await ethers.Wallet.fromBrainWallet(username, password);
     
+    // wallet example:
+    // {
+    //     address: "0xa40648B1943E903C860ed02A7058bc0204E5eEc5"
+    //     defaultGasLimit: 15000
+    //     mnemonic: "load owner fork unveil six pipe wife load repair boy bleak fall"
+    //     path: "m/44'/60'/0'/0/0"
+    //     privateKey: "0x773588b50f8ed61b7e5759d4471f8d4680f0ce8b02f618e1534d997cdfa73a7b"
+    //     provider: '...'
+    // }
+    
   } catch (e) {
     console.error(e)
   }
