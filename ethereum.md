@@ -19,7 +19,7 @@ const wallet = new ethers.Wallet(privateKey);
 const utils = ethers.utils;
 
 // Provider for test network
-const provider = new ethers.providers.getDefaultProvider({// eslint-disable-line
+const provider = new ethers.providers.getDefaultProvider({
   name: 'ropsten',
   chainId: 3,
 });
