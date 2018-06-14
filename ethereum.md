@@ -13,6 +13,7 @@ Faucets: [faucet-1](https://ropsten.ethers.io/#!/app-link/0xa5681b1fbda76e0d4ab6
 ## Examples
 ### Common
 ```
+// init wallet with created private key
 const privateKey = 'you ethereum wallet private key';
 const wallet = new ethers.Wallet(privateKey);
 const utils = ethers.utils;
