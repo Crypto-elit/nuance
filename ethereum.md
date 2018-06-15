@@ -92,7 +92,7 @@ async fetchTransactions() => {
 
 ### Get fee
 ```
-async fetchTransactions() => {
+async fetchFee() => {
   try {
     const feeBignumber = await provider.getGasPrice(); // return as Bignumber
     const fee = utils.formatEther(feeBignumber); // human readable format
